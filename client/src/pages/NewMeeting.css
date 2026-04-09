@@ -1,0 +1,208 @@
+.meeting-form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group small {
+  display: block;
+  margin-top: 6px;
+  color: #999;
+  font-size: 12px;
+}
+
+/* Upload Mode Tabs */
+.upload-mode-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #eee;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-btn:hover {
+  color: #667eea;
+}
+
+.tab-btn.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+/* Document Input Styling */
+.document-input-wrapper {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.document-input {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.document-input-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 40px 20px;
+  border: 2px dashed #667eea;
+  border-radius: 8px;
+  background-color: #f9faff;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.document-input-label:hover {
+  background-color: #f0f4ff;
+  border-color: #5568d3;
+}
+
+.document-input:focus + .document-input-label {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.doc-icon {
+  font-size: 28px;
+  width: 100%;
+}
+
+.file-name {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.file-size {
+  color: #999;
+  font-size: 12px;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.form-actions button {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Info Box */
+.info-box {
+  background: linear-gradient(135deg, #e7f5ff 0%, #e0f2ff 100%);
+  border-left: 4px solid #1971c2;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.info-box h3 {
+  color: #1971c2;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-box li {
+  color: #0c5aa0;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.info-box li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #1971c2;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .upload-mode-tabs {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    border-bottom: 2px solid #eee;
+    margin-bottom: 0;
+  }
+
+  .tab-btn.active {
+    border-bottom-color: #667eea;
+    border-right: none;
+  }
+
+  .audio-input-label {
+    padding: 30px 15px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+

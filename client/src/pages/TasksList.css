@@ -1,0 +1,285 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.stats-bar {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 15px;
+  border-right: 1px solid #eee;
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.filter-group select {
+  min-width: 150px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 8px;
+  color: #999;
+  font-size: 16px;
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: all 0.3s;
+  border-left: 4px solid #667eea;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateX(4px);
+}
+
+.task-card.status-completed {
+  opacity: 0.7;
+  background-color: #f9fafb;
+  border-left-color: #51cf66;
+}
+
+.task-card.status-completed .task-header h3 {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #51cf66;
+}
+
+.task-header h3 {
+  flex: 1;
+  font-size: 17px;
+  margin: 0;
+  color: #333;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.btn-delete:hover {
+  opacity: 1;
+}
+
+.task-description {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 15px 35px;
+  line-height: 1.4;
+}
+
+.task-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.detail-item .label {
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.detail-item span {
+  color: #333;
+  font-size: 14px;
+}
+
+.status-select {
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  background: white;
+  cursor: pointer;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 11px;
+  width: fit-content;
+}
+
+.badge-high {
+  background-color: #ffe0e0;
+  color: #c92a2a;
+}
+
+.badge-medium {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.badge-low {
+  background-color: #e7f5e7;
+  color: #2f9e44;
+}
+
+.meeting-name {
+  background-color: #e7f5ff;
+  color: #1971c2;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 13px;
+  width: fit-content;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  background: white;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .stats-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stat {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+  }
+
+  .stat:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .filter-group select {
+    flex: 1;
+  }
+
+  .task-details {
+    grid-template-columns: 1fr;
+  }
+}

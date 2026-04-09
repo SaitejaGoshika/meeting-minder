@@ -1,0 +1,19 @@
+{
+  "name": "meeting-minder",
+  "version": "1.0.0",
+  "description": "AI-powered smart meeting minutes and task tracker",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && node index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": ["meeting", "ai", "nlp", "task-tracking"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
